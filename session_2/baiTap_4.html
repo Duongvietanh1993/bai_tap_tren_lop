@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        form{
+            width: 200px;
+            border: 1px solid grey;
+            margin-top: 10px;
+            padding: 10px 5px 15px;
+        }
+        div{
+            margin: 5px 10px 10px;
+        }
+        input{
+            display: flex;
+
+        }
+        label{
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        button{
+            width: 100px;
+            margin: 0 15px 0;
+        }
+
+    </style>
+</head>
+<body>
+<form action="">
+    <div class="all">
+        <div class="xuongdong">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" placeholder="Nhập họ tên">
+        </div>
+        <div class="xuongdong">
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Nhập email">
+        </div>
+        <div class="xuongdong">
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại">
+        </div>
+        <div>
+            <label>Giới tính:</label>
+            <br>
+            <input class="radio" type="radio" id="male" name="gender">Nam
+            <input class="radio" type="radio" id="female" name="gender">Nữ
+        </div>
+        <button type="submit">Đăng ký</button>
+    </div>
+</form>
+</body>
+</html>
