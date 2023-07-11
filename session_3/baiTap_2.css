@@ -1,0 +1,19 @@
+body{
+    font-family: Arial,sans-serif;
+}
+h1{
+    color: sandybrown;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+div{
+    background-color: lightgoldenrodyellow;
+    padding: 10px 0;
+}
+span{
+    font-weight: bold;
+}

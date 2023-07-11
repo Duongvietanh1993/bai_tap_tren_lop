@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+div{
+    padding: 20px;
+}
+pre {
+    margin: auto;
+    text-align: center;
+    background-color: #a785ff;
+    width: 5%;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+span {
+    color: #36c3ff;
+}
+
+p {
+    text-align: center;
+}
+
+.mid {
+    text-align: center;
+}
+button{
+    padding: 10px;
+    font-size: 1.2rem;
+    background: #1c1c1c;
+    color: white;
+    margin: 0 10px;
+    border-radius: 6px;
+}

@@ -1,0 +1,104 @@
+form {
+    background-color: burlywood;
+    width: 35%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 25px 0;
+}
+
+.payment-method {
+    float: left;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.payment-method ul {
+    display: flex;
+    padding: 0 10px 10px;
+}
+
+.payment-method li {
+    background: #f0f4f7;
+    float: left;
+    padding: 10px;
+    border-radius: 3px
+}
+
+.payment-method li:not(:last-child) {
+    margin-right: 10px
+}
+
+.payment-method img {
+    width: 116px;
+    height: 55px
+}
+
+li {
+    transition-property: transform, height, width;
+    transition-duration: 2s;
+}
+
+li:hover {
+    height: 3.6rem;
+    width: 9rem;
+    transform: translateX(200px) rotate(45deg);
+}
+
+.top input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.top label {
+    display: block;
+    margin: 20px 32px 10px;
+    font-weight: bold;
+}
+
+.mid {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mid input {
+    display: block;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.mid label {
+    display: block;
+    margin: 20px 40px 10px;
+    font-weight: bold;
+}
+
+button {
+    font-size: 2rem;
+    padding: 5px 20px;
+    border-radius: 20px;
+    display: block;
+    margin: 30px;
+    width: 15rem;
+
+}

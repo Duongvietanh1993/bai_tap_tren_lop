@@ -1,0 +1,62 @@
+body{
+font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between; /*Lệnh dãn xang 2 bên*/
+    padding: 10px;
+    font-size: 20px;
+}
+h1{
+    color: white;
+    margin-left: 30px;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+li{
+    margin: 10px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h2{
+    text-align: center;
+    background-color: #dddddd;
+    margin: 0;
+    padding: 30px 0 10px ;
+}
+main{
+    background-color: #dddddd;
+    margin: auto;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 10px
+}
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+form{
+    width: 50%;
+    flex-direction: column;
+    display: block;
+    padding: 0 0 10px;
+    margin: auto;
+
+}
+button{
+    padding: 5px;
+    font-size: 20px;
+}
+
+
