@@ -1,0 +1,89 @@
+body {
+    background: darkgray;
+}
+
+.form {
+    background: #ffffff;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.head h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 2.1rem;
+    font-family: Arial, sans-serif;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.form-input input {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.form-input button {
+    width: 20%;
+    margin: 5px;
+    border-radius: 6px;
+    background: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+}
+.body{
+    margin: 0 15px 15px;
+}
+.form .letGo{
+    background: rgb(218, 218, 218);
+    width: 35%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0 rgba(128, 128, 128, 0.56);
+    margin: 10px 0;
+}
+.letGo h3{
+    margin-left: 15px;
+}
+.letGo button{
+    border-radius: 6px;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+}
+.letGo .reset{
+    background: #14c9ff;
+}
+.form .letSwim{
+    background: rgb(218, 218, 218);
+    width: 35%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px 0 rgba(128, 128, 128, 0.56);
+}
+.form h3{
+    margin-left: 15px;
+}
+.letSwim button{
+    border-radius: 6px;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 5px;
+}
+.letSwim .reset{
+    background: #14c9ff;
+}

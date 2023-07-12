@@ -1,0 +1,40 @@
+.all {
+    background: radial-gradient(circle at top, red, purple, yellow);
+    width: 500px;
+    height: 340px;
+    position: absolute;
+}
+
+.all-all {
+    position: relative;
+    border-radius: 40px;
+    background: #ffffff;
+    margin: 15px 20px;
+    padding: 10px;
+}
+
+.one {
+
+    display: flex;
+    justify-content: space-between;
+    line-height: 220px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 6rem;
+}
+
+.one b {
+    font-size: 2rem;
+}
+
+.two {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.two b {
+    padding: 0 5px;
+}
