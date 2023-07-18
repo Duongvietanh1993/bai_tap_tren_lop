@@ -163,7 +163,52 @@ hr {
     justify-content: start;
     padding: 10px 15px;
 }
-.three ._3{
-
-
+.three ._4{
+    background-image: url("https://suckhoedoisong.qltns.mediacdn.vn/thumb_w/1200/324455921873985536/2022/3/23/104253-1648037915953908604519-0-0-585-936-crop-16480379345461565530390.png");
+    background-size: cover;
+    background-position: center;
+    font-size: 1.1rem;
+    align-items: end;
+    justify-content: start;
+    padding: 10px 15px;
 }
+.three ._5{
+    background: #e15656;
+    font-size: 1.1rem;
+    align-items: start;
+    justify-content: start;
+    padding: 20px 15px;
+}
+.three ._6{
+    background-image: url("https://media2.gody.vn/public/mytravelmap/images/2018/6/1/nguyentoan/f3e583bfa88aab1b8a30ca4a8528c163.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 1.1rem;
+    align-items: start;
+    justify-content: start;
+    padding: 10px 15px;
+    transition: all 0s;
+}
+.three ._2:hover{
+    background: url("https://i.ex-cdn.com/vntravellive.com/files/news/2019/07/30/can-canh-le-hoi-khinh-khi-cau-tai-phap-165823.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.three ._1:hover{
+    background: url("https://media2.gody.vn/public/mytravelmap/images/2018/6/1/nguyentoan/f3e583bfa88aab1b8a30ca4a8528c163.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.three ._3:hover{
+    background: url("https://i.pinimg.com/564x/a8/34/9f/a8349f2c9c4575454985aef7237f5da4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.three ._4:hover{
+    background: url("https://i.ex-cdn.com/vntravellive.com/files/news/2019/07/30/can-canh-le-hoi-khinh-khi-cau-tai-phap-165823.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/
