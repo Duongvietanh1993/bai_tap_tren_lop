@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="dollar">Nhập giá tiền: </label>
+<input type="text" id="dollar" placeholder="Nhập vào số tiền muốn đổi: ">
+<button type="button" onclick="changeDollar()">Change</button>
+<p id="change">0</p>
+
+<script>
+function changeDollar() {
+let dollar = document.getElementById("dollar").value;
+let vnd= dollar * 23000;
+document.getElementById("change").innerHTML="Số tiền đổi sang VND: "+ vnd +" VND"
+}
+</script>
+</body>
+</html>

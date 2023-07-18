@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label for="math">Nhập điểm toán: </label>
+    <input type="number" id="math" placeholder="Nhập điểm toán">
+</div>
+<div>
+    <label for="physical">Nhập điểm lý: </label>
+    <input type="number" id="physical" placeholder="Nhập điểm toán">
+</div>
+<div>
+    <label for="chemistry">Nhập điểm Hóa: </label>
+    <input type="number" id="chemistry" placeholder="Nhập điểm toán">
+</div>
+<button type="button" id="averaged" onclick="checkAveraged()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function checkAveraged() {
+        let math = parseInt(document.getElementById("math").value);
+        let physical = parseInt(document.getElementById("physical").value);
+        let chemistry = parseInt(document.getElementById("chemistry").value);
+        let averaged = (math + physical + chemistry) / 3;
+        document.getElementById("result").innerHTML = "Điểm trung bình: " + averaged;
+    }
+</script>
+</body>
+</html>
