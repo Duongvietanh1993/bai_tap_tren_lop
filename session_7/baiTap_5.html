@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        header{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid black;
+            width: 20rem;
+            padding: 10px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            gap: 10px;
+        }
+        div input{
+            font-size: 1.1rem;
+            padding: 10px 0 5px
+        }
+        div button{
+            width: 10rem;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        div p{
+            font-size: 2rem;
+            border-top:1px solid black ;
+            margin: 0;
+            padding: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <label for="point">Nhập điểm của học viên: </label>
+        <input type="number" id="point" placeholder="Nhập số điểm trong khoảng 100 !" max="100">
+    </div>
+    <div>
+        <button type="button" onclick="checkScore()">Check</button>
+        <p id="result">...</p>
+    </div>
+</header>
+
+<script>
+    function checkScore() {
+        let score = document.getElementById("point").value;
+        if (score >= 75) {
+            document.getElementById("result").innerHTML = `Loại A`
+        } else if (score >= 60) {
+            document.getElementById("result").innerHTML = `Loại B`
+        } else if (score >= 45) {
+            document.getElementById("result").innerHTML = `Loại C`
+        } else if (score >= 35) {
+            document.getElementById("result").innerHTML = `Loại D`
+        } else {
+            document.getElementById("result").innerHTML = `Loại E`
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            gap: 5px;
+        }
+        body div{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+        body div input{
+            font-size: 1.1rem;
+            padding: 10px 5px 0;
+            width: 20rem;
+            border-radius: 5px;
+        }
+        body button{
+            font-size: 1.1rem;
+            padding: 5px;
+            width: 10rem;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        body p{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label>Nhập vào số thứ nhất: </label>
+    <input type="number" id="number_1" placeholder="Mời nhập số !">
+</div>
+<div>
+    <label>Nhập vào số thứ hai: </label>
+    <input type="number" id="number_2" placeholder="Mời nhập số !">
+</div>
+<div>
+    <label>Nhập vào số thứ ba: </label>
+    <input type="number" id="number_3" placeholder="Mời nhập số !">
+</div>
+<button type="button" onclick="checkMax()">Click</button>
+<p id="result">0</p>
+<script>
+    function checkMax() {
+        let numberOne = document.getElementById("number_1").value;
+        let numberTwo = document.getElementById("number_2").value;
+        let numberThree = document.getElementById("number_3").value;
+        if (numberOne > numberTwo && numberOne > numberThree) {
+            document.getElementById("result").innerHTML=`Số lớn nhất là: ${numberOne}`;
+        }else if (numberTwo>numberOne && numberTwo>numberThree){
+            document.getElementById("result").innerHTML=`Số lớn nhất là: ${numberTwo}`;
+        }else {
+            document.getElementById("result").innerHTML=`Số lớn nhất là: ${numberThree}`;
+        }
+    }
+</script>
+</body>
+</html>

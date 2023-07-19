@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        header {
+            border: 1px solid black;
+            padding: 20px 5px;
+            width: 800px;
+        }
+
+        header form {
+            display: flex;
+            justify-content: space-around;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        label{
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        input,select{
+            padding: 5px;
+            width: 13rem;
+            margin: 10px 0 10px;
+            font-size: 1.1rem;
+        }
+        select{
+            width: 8rem;
+        }
+        button{
+            padding: 7px 20px;
+            border-radius: 4px;
+            background: #466aff;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            border: 3px solid #45e7e7;
+        }
+        p{
+            margin: 20px 30px 0;
+            font-size: 1.5rem;
+            color: #466aff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <form>
+        <div>
+            <label>Amount</label>
+            <input type="number" id="money" placeholder="Enter the number">
+        </div>
+        <div>
+            <label>From Currency</label>
+            <select>
+                <option>USD</option>
+                <option>Việt Nam</option>
+            </select>
+        </div>
+        <div>
+            <label>To Currency</label>
+            <select>
+                <option>Việt Nam</option>
+                <option>USD</option>
+            </select>
+        </div>
+        <div>
+            <label>&nbsp</label>
+            <button type="button" onclick="changeMoney()">Convert</button>
+        </div>
+
+    </form>
+    <hr>
+    <p id="result">Result</p>
+
+    <script>
+        function changeMoney() {
+            let inputMoney = document.getElementById("money").value;
+            let vnd = inputMoney * 23000;
+            document.getElementById("result").innerHTML=`Result : ${vnd}VND`;
+        }
+    </script>
+</header>
+</body>
+</html>
