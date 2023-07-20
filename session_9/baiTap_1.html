@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chỉ số BMI</h1>
+<label>Cân nặng: </label>
+<input type="number" id="weight" placeholder="Kg">
+<label>Chiều cao: </label>
+<input type="number" id="height" placeholder="m">
+<button type="button" onclick="checkBMI()">Let Check</button>
+<p id="result">Kết quả:</p>
+<script>
+    function checkBMI() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let bmi = weight / Math.pow(height, 2);
+        if (bmi < 18.5) {
+            document.getElementById("result").innerHTML = 'Cân nặng thấp (gầy)';
+        } else if (bmi < 25) {
+            document.getElementById("result").innerHTML = 'Bình thường';
+        } else if (bmi < 30) {
+            document.getElementById("result").innerHTML = 'Tiền béo phì';
+        } else if (bmi < 35) {
+            document.getElementById("result").innerHTML = 'Béo phì độ I';
+        }else  if (bmi<40){
+            document.getElementById("result").innerHTML= 'Béo phì độ II';
+        }else {
+            document.getElementById("result").innerHTML= 'Béo phì độ III';
+        }
+    }
+
+</script>
+</body>
+</html>

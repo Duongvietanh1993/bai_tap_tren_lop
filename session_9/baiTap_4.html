@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number_1 = parseInt(prompt("Nhập vào số thứ 1: "));
+    let number_2 = parseInt(prompt("Nhập vào số thứ 2: "));
+    let number_3 = parseInt(prompt("Nhập vào số thứ 3: "));
+    if (number_1 > number_2 && number_1 > number_3) {
+        if (number_2 > number_3) {
+            console.log(`Max: ${number_1} - Min: ${number_3}`)
+        } else {
+            console.log(`Max: ${number_1} - Min: ${number_2}`)
+        }
+    } else if (number_2 > number_1 && number_2 > number_3) {
+        if (number_1 > number_3) {
+            console.log(`Max: ${number_2} - Min: ${number_3}`)
+        } else {
+            console.log(`Max: ${number_2} - Min: ${number_1}`)
+        }
+    } else {
+        if (number_1 > number_2) {
+            console.log(`Max: ${number_3} - Min: ${number_2}`)
+        } else {
+            console.log(`Max: ${number_3} - Min: ${number_1}`)
+        }
+    }
+</script>
+</body>
+</html>
