@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập vào số A:</label>
+<input type="text" id="numberA" placeholder="Nhập vào số A">
+<label>Nhập vào số B:</label>
+<input type="text" id="numberB" placeholder="Nhập vào số B">
+<button type="button" onclick="check()">Check</button>
+<p id="result"></p>
+
+<script>
+    function check() {
+        let numberA = parseInt(document.getElementById("numberA").value)
+        let numberB = parseInt(document.getElementById("numberB").value)
+        if (numberA % numberB == 0){
+            document.getElementById("result").innerHTML=`${numberA} chia hết cho ${numberB}`;
+        }else {
+            document.getElementById("result").innerHTML=`${numberA} không chia hết cho ${numberB}`;
+        }
+            }
+</script>
+</body>
+</html>

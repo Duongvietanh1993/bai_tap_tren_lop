@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let electricNumber = parseInt(prompt("Nhập vào tổng số điện đã sử dụng"))
+    let count = 0;
+    if (electricNumber <= 50) {
+        count = electricNumber * 1728;
+    } else if (electricNumber <= 100) {
+        count = (electricNumber - 50) * 1786 + 50 * 1728;
+    } else if (electricNumber <= 200) {
+        count = (electricNumber - 100) * 2074 + 50 * 1728 + 50 * 1786;
+    } else {
+        count = (electricNumber - 200) * 2535 + 50 * 1728 + 50 * 1786 + 100 * 2074;
+    }
+    alert(count)
+</script>
+</body>
+</html>

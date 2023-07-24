@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>số lượng: </label>
+<input type="text" id="count" placeholder="Nhập vào số lượng">
+<label>Chiết khấu hoa hồng: </label>
+<input type="text" id="commissionMoney" placeholder="Nhập tiền chiết khấu">
+<button type="button" onclick="check()">Check</button>
+<p id="result"></p>
+
+<script>
+    function check() {
+        let count = parseInt(document.getElementById("count").value);
+        let discount = parseInt(document.getElementById("commissionMoney").value);
+        let lower = (discount * 0.01) * count;
+        let higher = (discount * 0.02) * count;
+        if (discount >= 1000000) {
+            document.getElementById("result").innerHTML = `Hoa hồng chiết khấu là ${lower}`;
+        }else {
+            document.getElementById("result").innerHTML = `Hoa hồng chiết khấu là ${higher}`;
+        }
+    }
+
+</script>
+</body>
+</html>
