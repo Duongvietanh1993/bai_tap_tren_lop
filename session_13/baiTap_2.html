@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ["cat", "dog", "chicken", "pig"];
+    let arr2 = ["mèo", "chó", "gà", "lợn"];
+    let inputStr = prompt("Nhập từ cần dịch");
+    let index = false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (inputStr == arr1[i]){
+            index=true;
+            console.log(arr2[i])
+            break;
+        }
+    }
+    if (index == false){
+        console.log("Không có")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // in ra 20 số fibonaci đầu tiên
+    //f0=0, f1=1 : 2 số fibonaci đầu tiên
+    //f2=f1+f0=1+0=1;
+    //=> f3=2, f4=3,f5=5,f6=8....
+
+    //đếm số lượng số in ra
+    let count = 0;
+    let a = 0; //số fn-2
+    let b = 1; //số fn-1
+    for (i = 1; i <= 20; i++) {
+        if (i == 1) {
+//f1=0
+            console.log(a);
+        } else if (i == 2) {
+//f2=1
+            console.log(b);
+        } else {
+// fn = fn - 1 + fn - 2
+            let c = a + b;
+            a = b;
+            b = c;
+            console.log(c);
+
+        }
+    }
+</script>
+
+</body>
+</html>

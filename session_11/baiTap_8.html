@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 11.Viết một đoạn mã mô phỏng máy ATM.
+    // Cho người dùng nhập vào số tiền cần rút.
+    // Sau đó in ra tổng số tờ tiền mà người dùng nhận được với từng loại mệnh giá.
+    // Biết máy ATM chỉ rút được 3 loại mệnh giá là 500.000, 200.000, 100.000, 50.000.
+    // Biết số tiền tối thiểu rút một lần là 50.000
+
+    let tien = 0; // khai báo biến lưu trữ số tiền nhập vào
+    let a = b = c = d = 0; // khai báo lần lượt các biến đếm số lượng các tờ tiền 500, 200, 100, 50; let a = 0; let b = 0....
+
+
+    // vòng lặp nhập tiền
+    do {
+        tien = prompt("Nhap so tien ban muon rut")
+    } while (tien <= 0 || tien % 50000 !== 0); // không được nhập tiền âm, tiền = 0 và không chia hết cho 50.000
+
+    // vòng lặp khi còn tiền thì sẽ tính toán trừ tiền
+    while (tien > 0) {
+        //nếu tiền lớn hơn 500.000 thì sẽ rút được 1 tờ 500.000 và khi nhỏ hơn thì tương tự cho các tờ tiền khác
+        if (tien >= 500000) {
+            tien -= 500000
+            a++
+        } else if (tien >= 200000) {
+            tien -= 200000
+            b++
+        } else if (tien >= 100000) {
+            tien -= 100000
+            c++
+        } else {
+            tien -= 50000
+            d++
+        }
+    }
+
+    // kiểm tra xem có tờ nào và có bao nhiêu tờ thì in ra
+    if (a > 0) {
+        console.log(`500000 - ${a}`)
+    }
+    if (b > 0) {
+        console.log(`200000 - ${b}`)
+    }
+    if (c > 0) {
+        console.log(`100000 - ${c}`)
+    }
+    if (d > 0) {
+        console.log(`50000 - ${d}`)
+    }
+</script>
+</body>
+</html>

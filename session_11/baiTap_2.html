@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập số lượng số cần in:</label>
+<input type="number" id="number" placeholder="Nhập số lượng cần in">
+<button type="button" onclick="print()">Click</button>
+<p id="result"></p>
+<script>
+    function print() {
+        let number = document.getElementById("number").value;
+        let count = 0;
+        let countNT = 0;
+        for (let i = 2; countNT < number; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                console.log(i + "")
+                countNT++;
+            }
+            count = 0;
+        }
+    }
+
+
+</script>
+</body>
+</html>

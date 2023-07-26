@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Todo List</h1>
+<label>Products: </label>
+<input type="text" id="jod" placeholder="New products">
+<button type="button" onclick="add()">Add</button>
+<h2>All products</h2>
+<table>
+    <tr>
+        <td>Product Name</td>
+        <td><p id="countNumber">0</p></td>
+    </tr>
+    <tbody id="list">
+
+    </tbody>
+</table>
+<script>
+    let productList = [];
+
+    function add() {
+        let jod = document.getElementById("jod").value;
+        productList.push(jod);
+        display();
+    }
+
+
+    function display() {
+        let html = '';
+        for (let i = 0; i < productList.length; i++) {
+            html += `
+            <tr>
+            <td>${productList[i]}</td>
+            <td>${i+1}</td>
+            <td><button onclick="sua(${i})">Edit</button></td>
+            <td><button onclick="xoa(${i})">Delete</button></td>
+            </tr>
+            `;
+        }
+        document.getElementById('list').innerHTML = html;
+        document.getElementById('countNumber').innerHTML = productList.length;
+        document.getElementById('jod').value = "";
+    }
+    function xoa(index) {
+        productList.splice(index,1)
+        display();
+    }
+    function sua(index) {
+        productList[index] = prompt(`Điều chỉnh ${productList} thành`)
+        display();
+    }
+
+</script>
+</body>
+</html>

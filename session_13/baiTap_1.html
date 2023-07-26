@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai 1
+    /* myColor = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+     console.log(myColor.join())*/
+
+    //bai 2
+    /*  let num = prompt("Nhập vào số")
+        num = num.toString(); // Chuyển số nhập vào thành chuỗi
+        let result = '';
+        for (let i = 0; i < num.length; i++) {
+            if (i > 0 && num[i - 1] % 2 === 0 && num[i] % 2 === 0) {
+                result += '_'; // Nếu hai số liên tiếp đều là số chẵn thì chèn dấu _
+            }
+            result += num[i];
+        }
+        console.log(result)*/
+    //cách 2
+    /* let str = prompt("Nhập vào")
+     let arr = [];
+     for (let i = 0; i < str.length; i++) {
+         if (str.charAt(i + 1) % 2 == 0 && str.charAt(i) % 2 == 0) {
+             arr.push(str.charAt(i));
+         } else {
+             let temp = "";
+             for (let j = i; j < str.length; j++) {
+                 temp += str.charAt(j);
+                 if (str.charAt(i - 1) % 2 == 0 && str.charAt(i) % 2 == 0) {
+                     i = j;
+                     break;
+                 }
+             }
+             arr.push(temp)
+         }
+     }
+     console.log(arr.join("-"))*/
+    //cach 3
+
+    /*let str = prompt("Nhập vào");
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        arr.push(str.charAt(i))
+        if (parseInt(str.charAt(i)) % 2 === 0 && parseInt(str.charAt(i + 1)) % 2 === 0) {
+            arr.push("-");
+        }
+    }
+    console.log(arr.join(""));*/
+
+    //bai 3
+   /* let str = prompt("Nhập vào một chuỗi:");
+    let arrStr = "";
+    ``
+
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) === str.charAt(i).toUpperCase()) {
+            arrStr += str.charAt(i).toLowerCase();
+        } else {
+            arrStr += str.charAt(i).toUpperCase();
+        }
+    }*/
+
+    console.log("Chuỗi sau khi chuyển đổi: " + arrStr);
+
+    //cach 2
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // khai báo bảng chữ hoa
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz'; // khai báo bảng chữ thường
+    // ==> độ dài hai bảng như nhau và vị trí các chữ tương ứng như nhau
+
+    let chuoi = prompt("Nhap vao mot chuoi ma ban muon") // cho người dùng nhập
+    let ketQua = [] // biến lưu kết quả
+
+    // vòng lặp để kiểm tra từng chữ trong chuỗi nhập và chuyển đổi nó thành hoa thường
+    for (let i = 0; i < chuoi.length; i++) {
+        // nếu là dấu khoảng trắng thì thêm luôn vào kết quả mà ko cần kiểm tra
+        if (chuoi[i] == " ") {
+            ketQua.push(" ")
+            continue
+        }
+
+        // nếu là chữ thì đi kiểm tra với từng chữ trong bảng chữ cái
+        for (let j = 0; j < chuHoa.length; j++) {
+            // nếu là chữ Hoa thì đổi thành chữ Thường
+            // nếu là chữ Thường thì đổi thành chữ Hoa
+            if (chuoi[i] == chuHoa[j]) {
+                ketQua.push(chuThuong[j])
+            } else if (chuoi[i] == chuThuong[j]) {
+                ketQua.push(chuHoa[j])
+            }
+        }
+    }
+
+    console.log(ketQua.join(""));
+</script>
+</body>
+</html>

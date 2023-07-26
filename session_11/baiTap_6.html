@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //Viết chương trình nhập vào số nguyên N.
+  //Nếu giá trị nhập vào > 0, yêu cầu người dùng nhập tiếp cho đến khi nào
+  //nhập vào số < 0 thì kết thúc.
+  //Hiển thị kết quả phân loại các số vừa nhập thuộc các nhóm số
+  //nguyên tố, số hoàn hảo, số chẵn, số lẻ
+  let n;
+  do {
+    n = +prompt("Nhập vào số nguyên N");
+    if (n > 0) {
+      let flag = true;
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag == true) {
+        console.log(`${n} Là số nguyên tố`);
+      }
+      if (n % 2 == 0) {
+        console.log(`${n} là số chẵn`);
+      } else {
+        console.log(`${n} là số lẻ`);
+      }
+      let t = 0;
+      for (i = 1; i < n; i++) {
+        if (n % i == 0) {
+          t += i;
+        }
+      }
+      if (t == n) {
+        console.log(`${n} Là số hoàn hảo`);
+      }
+    }
+  } while (n > 0);
+</script>
+</body>
+</html>
