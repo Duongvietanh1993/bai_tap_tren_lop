@@ -22,20 +22,20 @@
 
 <script>
     const bakery = ["chocolate", "marshmallow", "cookies", "chips"];
-    let listProducts = [];
+    let carts = [];
 
     function display() {
         let html = '';
-        for (let i = 0; i < listProducts.length; i++) {
+        for (let i = 0; i < carts.length; i++) {
             html += `
             <tr>
-            <td>${listProducts[i]}</td>
+            <td>${carts[i]}</td>
             <td>${i + 1}</td>
             </tr>
             `;
         }
         document.getElementById("list").innerHTML = html;
-        document.getElementById("countNumber").innerHTML = listProducts.length;
+        document.getElementById("countNumber").innerHTML = carts.length;
         document.getElementById("product").value = "";
     }
 
@@ -48,10 +48,10 @@
                 break;
             }
         }
-        if (check == false) {
+        if (check == false) { // (!check)
             alert("We don’t have that item")
         } else {
-            listProducts.push(productInput);
+            carts.push(productInput);
             let continueShopping = confirm("Hỏi người dùng có muốn tiếp tục mua hàng hay không (yes/no)");
             if (continueShopping) {
                 document.getElementById("product").value = "";
@@ -59,7 +59,7 @@
             } else {
                 alert("Thank you for buying");
                 document.getElementById("product").value = "";
-                listProducts = [];
+                carts = [];
                 display();
             }
         }
