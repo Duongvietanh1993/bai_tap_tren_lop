@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai 1
+
+    /*function sumNumber(a,b) {
+      return a+b;
+    }
+
+    console.log(`tổng bình phương 2 số là ${Math.pow(sumNumber(2,4),2)}`)*/
+
+    //bai 2
+
+    /*let radiur = +prompt("Nhập vào bán kính");
+
+      function calculateCircle(radiur) {
+          let perimeter = Math.round(Math.PI * radiur * 2);
+          let area = Math.round(Math.PI * (Math.pow(radiur, 2)));
+          let arr = [area, perimeter];
+          return arr;
+      }
+
+      console.log(calculateCircle(radiur));*/
+
+    //bai 3
+    /*function factorialOfANumber(number) {
+        if (number < 0) {
+            return "Khong có giai thua"
+        }
+        let result = 1;
+        for (let i = 2; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    console.log(`giai thua so ${factorialOfANumber(4)}`)*/
+
+    //bai 4
+    /*function check(string) {
+       return  string < 0 || string >= 0
+    }
+    console.log(check("0"))
+    console.log(check("O"))*/
+
+    //bai 5
+    /*function checkMin(a, b, c) {
+        if (a < b && a < c) {
+            return a + " là min";
+        } else if (b < a && b < c) {
+            return b + " là min";
+        } else {
+            return c + " là min";
+        }
+    }
+    console.log(checkMin(2,5,3))*/
+
+    //cach 2
+
+    /*let num = prompt("Nhập kích thước mảng");
+    let arr1 = [];
+
+    for (let i = 0; i < num; i++) {
+        let ele = prompt(`Nhập phần tử thứ ${i} của mảng`);
+        arr1.push(ele);
+    }
+
+    function checkMin(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    console.log(`nhỏ nhất ${checkMin(arr1)}`);*/
+
+    //bai 6
+    /*function check(number) {
+           return  number > 0
+        }
+        console.log(check("1"))
+        console.log(check("-1"))*/
+
+    //bai 7
+    /* let a = 1;
+    let b = 2;
+
+    function swap(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        return [a, b];
+    }
+
+    console.log(`a truoc khi doi ${a}`)
+    console.log(`b truoc khi doi ${b}`)
+    let arr = [a, b];
+    arr = swap(a, b);
+    console.log(`a sau khi doi ${arr[0]}`)
+    console.log(`b sau khi doi ${arr[1]}`)*/
+
+    //bai 8
+    /* function daoNguoc(arr) {
+         return arr.reverse();
+     }
+     let arr1 = [1,2,3,4,5,6]
+     console.log(daoNguoc(arr1))*/
+
+    //bai 9
+    function check(arr, sting) {
+        let check = false;
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (sting == arr[i]) {
+                check = true
+                count++;
+            }
+        }
+        if (check) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let arr = prompt("Nhập vào 1 chuỗi")
+    arr.split(",")
+    let a = prompt("Nhập vào chữ kiểm tra")
+    console.log(check(arr, a))
+</script>
+</body>
+</html>
