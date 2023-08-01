@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="inputText">
+<button type="button" onclick="countWord()">Submit</button>
 <script>
 
     //bai 1
@@ -47,7 +49,7 @@
     console.log(checkNumber(a))*/
 
     //bai 3
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    /*let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     function isPrime(arr) {
         let arr1 = [];
@@ -61,7 +63,51 @@
         return arr1
     }
 
-    console.log(isPrime(arr))
+    console.log(isPrime(arr))*/
+
+    //bai 4
+    /*function countWord() {
+        let value = document.getElementById("inputText").value;
+        let count = 0;
+        let array = [];
+        let fla
+        for (let i = 0; i < value.length; i++) {
+            let index = checkExistCharacter(array, value.charAt(i))
+            if (index > 0) {
+                array[index][1] += 1;
+            } else {
+                array.push([value.charAt(i), 1]);
+            }
+        }
+
+    }
+
+    function checkExistCharacter(arr, char) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i][0] == char) {
+                return i;
+            }
+        }
+        return -1;
+    }*/
+
+    //cach 2
+    function countWord() {
+        let input = document.getElementById("inputText").value;
+        let inputLowerCase = input.toLowerCase();
+        let array = [];
+        for (let i = 0; i < inputLowerCase.length; i++) {
+            let char = inputLowerCase[i];
+            if (array[char]) {
+                array[char]++;
+            } else {
+                array[char] = 1;
+            }
+        }
+        for (let char in array) {
+            console.log(char + ': ' + array[char]);
+        }
+    }
 </script>
 </body>
 </html>
