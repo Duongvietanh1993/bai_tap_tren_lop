@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        width;
+        height;
+
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getArea() {
+            console.log(`Diện tích là ${this.width * this.height}`)
+        }
+
+        getPerimetor() {
+            console.log(`Chu vi là ${2 * (this.width + this.height)}`)
+        }
+    }
+
+    let a = prompt("so 1")
+    let b = prompt("so 2")
+    let rectangle1 = new Rectangle(a, b);
+    console.log(rectangle1)
+    rectangle1.getArea();
+    rectangle1.getPerimetor();
+
+</script>
+</body>
+</html>

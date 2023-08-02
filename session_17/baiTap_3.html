@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        batteryLevel;
+
+        constructor(batteryLevel) {
+            this.batteryLevel = batteryLevel;
+            this.status = true;
+            this.typeMess = "";
+            this.inbox = [];
+            this.sent = [];
+        }
+
+        turnOn() {
+            if (this.batteryLevel > 0) {
+                this.status = true;
+            }
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+
+        sacPin() {
+            if (this.batteryLevel == 100) {
+                console.log("Pin đầy")
+            } else {
+                this.batteryLevel++;
+            }
+        }
+
+        soanTinNhan(value) {
+            if (this.status) {
+                this.typeMess = value
+                this.batteryLevel--;
+            }
+        }
+
+        nhanTinNhan(value) {
+            if (this.status) {
+                this.inbox.push(value);
+                this.batteryLevel--;
+            }
+        }
+
+        guiTinNhan(phone) {
+            if (this.status) {
+                this.sent.push(this.typeMess)
+                phone.nhanTinNhan(this.typeMess)
+                this.batteryLevel--;
+            }
+        }
+
+        xemTinNhan() {
+            if (this.status) {
+                return this.inbox;
+            }
+        }
+
+        xemTinGui() {
+            if (this.status) {
+                return this.sent;
+            }
+        }
+
+    }
+
+    let a = prompt("pin máy 1")
+    let b = prompt("pin máy 2")
+    let messge= prompt("Nhập tin nhắn")
+    let nokia = new Mobile(a);
+    let iphone = new Mobile(b);
+
+
+    nokia.turnOff()
+    nokia.soanTinNhan(messge);
+    nokia.guiTinNhan(iphone);
+    console.log(iphone.xemTinNhan())
+
+
+    nokia.turnOn()
+    console.log(nokia.sacPin())
+    nokia.soanTinNhan(messge);
+    nokia.guiTinNhan(iphone);
+    console.log(` ${iphone.xemTinNhan()}`)
+
+
+</script>
+</body>
+</html>
