@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        tr{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            text-align: center;
+        }
+        td{
+            text-align: left;
+            width: 100px;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>SHOP</h1>
+<label>Products: </label>
+<input type="text" id="product" placeholder="Nhập vào sản phẩm muốn mua">
+<button type="button" onclick="add()">Search</button>
+<hr>
+<h2>Shopping cart</h2>
+<table>
+    <tr class="gioHang">
+        <td>ID</td>
+        <td>Product Name</td>
+        <td>Quantity</td>
+        <td><p><i class="fa-solid fa-bag-shopping"></i><sup id="countNumber">0</sup></p></td>
+    </tr>
+    <tbody id="list">
+
+    </tbody>
+</table>
+</body>
+</html>
+<script src="js/tongHop_5.js"></script>
