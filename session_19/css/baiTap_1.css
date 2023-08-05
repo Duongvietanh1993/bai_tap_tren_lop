@@ -1,0 +1,103 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*bai 1*/
+#hidden-text {
+    display: none;
+}
+.div_brg{
+    margin: 20px;
+
+}
+
+/*bai 2*/
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    visibility: hidden;
+
+}
+.div1_brg{
+    padding: 20px;
+}
+
+.div1 p {
+    background: rgb(255, 255, 255);
+    width: 40rem;
+    padding: 50px 10px;
+}
+
+.div1 #hide_box {
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 36%;
+}
+/*bai3*/
+.div3{
+    padding: 20px;
+}
+.colorBtn{
+
+    width: 50px;
+    height: 50px;
+}
+._one{
+    background: #ea0000;
+    border: 1px solid black;
+}
+._two{
+    background: #0433ff;
+    border: 1px solid black;
+}
+._three{
+    background: yellow;
+    border: 1px solid black;
+}
+.boxColor{
+    display: flex;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+/*bai 4*/
+.div4{
+    margin: 20px;
+    text-align: center;
+    position: relative;
+}
+.text_hide{
+    visibility: hidden;
+    position: absolute;
+    bottom: 10%;
+    background: #5b5b5b;
+    padding: 10px;
+    border-radius: 5px;
+    left: 45%;
+    border: 1px solid black;
+
+}
+
+/*bai 5*/
+
+.div5{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.div5 button{
+    width: 150px;
+}
+
+

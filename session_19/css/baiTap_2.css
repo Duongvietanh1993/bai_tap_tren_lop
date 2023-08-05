@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: Arial,sans-serif;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    height: 100px;
+    margin: 20px 0;
+    color: white;
+
+}
+
+.clock div {
+    background: #1ea2ff;
+    text-align: center;
+    width: 100px;
+    position: relative;
+    border: 2px solid black;
+}
+.clock div:nth-child(3){
+    background: #fd24c3;
+}
+.clock div:nth-child(3) p{
+    background: #ff0080;
+}
+.clock span{
+    font-size: 3rem;
+    padding: 5px;
+    text-align: center;
+    line-height: 70px;
+}
+.clock p{
+    background: #0433ff;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
