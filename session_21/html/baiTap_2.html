@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/baiTap_2.css">
+</head>
+<body>
+<h1>Quản Lý Danh Học Viên</h1>
+<div class="input_value">
+    <input type="text" placeholder="Content" id="content" required>
+    <input type="date" placeholder="nhập age" id="due_date" required>
+    <select id="status">
+        <option value="on">on</option>
+        <option value="off">off</option>
+    </select>
+    <input placeholder="Username" id="assigned_to" required>
+    <button onclick="add()">Submit</button>
+</div>
+<br>
+<hr>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Content</th>
+        <th>Due date</th>
+        <th>Status</th>
+        <th>Assigned to</th>
+    </tr>
+    <tbody id="display">
+
+    </tbody>
+</table>
+</body>
+</html>
+<script src="../js/baiTap_2.js"></script>
