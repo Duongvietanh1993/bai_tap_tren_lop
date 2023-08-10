@@ -25,13 +25,15 @@ let product = [
 localStorage.setItem("product", JSON.stringify(product))
 
 let indexEdit = -1;
+
 function display() {
+    localStorage.setItem("product", JSON.stringify(product))
     let str = "";
     for (let i = 0; i < product.length; i++) {
-        const elemen=product[i];
-        str +=`
+        const elemen = product[i];
+        str += `
         <tr>
-        <td>${i+1}</td>
+        <td>${i + 1}</td>
         <td>${elemen.content}</td>
         <td>${elemen.dueDate}</td>
         <td>${elemen.status}</td>
@@ -39,21 +41,26 @@ function display() {
         </tr>
         `;
     }
-    document.getElementById("display").innerHTML=str;
+    document.getElementById("display").innerHTML = str;
 
 }
 display()
+
 function add() {
-    let content = document.getElementById("content").value;
+
+        let content = document.getElementById("content").value;
     let dueDate = document.getElementById("due_date").value;
     let status = document.getElementById("status").value;
     let assignedTo = document.getElementById("assigned_to").value;
-let newProduct={
-    id: 3,
-    content,
-    dueDate,
-    status,
-    assignedTo
-};
-
+    let newProduct = {
+        id: 3,
+        content,
+        dueDate,
+        status,
+        assignedTo
+    };
+    product.push(newProduct);
+    localStorage.setItem("product", JSON.stringify(product))
+    display();
 }
+
